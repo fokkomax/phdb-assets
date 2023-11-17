@@ -2,8 +2,15 @@
 // `ng build` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
-export const environment = {
-  production: false
+export const AppConfig = {
+  production: false,
+  environment: 'LOCAL',
+  appName: 'PHDB Assets',
+  version: '1.1.0-beta',
+  subVersion: '2021.02.18-01',
+  apiUrl: 'http://localhost:8080',
+  whiteUrl: 'https://it-phdb.moph.go.th/phdb-meeting/',
+  blackUrl: 'http://localhost:8080'
 };
 
 /*
