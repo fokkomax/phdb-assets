@@ -20,11 +20,17 @@ import { AutoFocusModule } from 'primeng/autofocus';
 import { ToastModule } from 'primeng/toast';
 import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
+import { BadgeModule } from 'primeng/badge';
+import { TableModule } from 'primeng/table';
+import { OverallReportComponent } from './overall-report/overall-report.component';
+import { ToolbarModule } from 'primeng/toolbar';
+import { TransferFormComponent } from './transfer-form/transfer-form.component';
+import { DropdownModule } from 'primeng/dropdown';
 
 
 @NgModule({
     declarations: [
-        AppComponent, NotfoundComponent, MainComponent, LoginComponent
+        AppComponent, NotfoundComponent, MainComponent, LoginComponent, OverallReportComponent, TransferFormComponent
     ],
     imports: [
         AppRoutingModule,
@@ -35,7 +41,11 @@ import { InputTextModule } from 'primeng/inputtext';
         AutoFocusModule,
         ToastModule,
         ButtonModule,
-        InputTextModule
+        InputTextModule,
+        BadgeModule,
+        TableModule,
+        ToolbarModule,
+        DropdownModule
     ],
     providers: [
         { provide: 'API_URL', useValue: AppConfig.apiUrl },

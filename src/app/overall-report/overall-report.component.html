@@ -1,0 +1,43 @@
+<div class="grid">
+    <div class="col-12" @fadeAnimation2>
+        <div class="card">
+            <h5>
+                <p-badge value="รายงานปัญหาภาพรวม" size="large" severity="primary" styleClass="p-font">
+                </p-badge>
+            </h5>
+
+            <p-toolbar styleClass="mb-4 gap-2">
+                <ng-template pTemplate="left">
+                    <button pButton pRipple label="เพิ่ม" icon="pi pi-plus" (click)="openNew()"
+                        class="p-button-sm p-button-raised p-button-success p-button-text mr-2"></button>
+                </ng-template>
+
+                <ng-template pTemplate="right">
+
+                </ng-template>
+            </p-toolbar>
+            <p-table [value]="products" [tableStyle]="{'min-width': '60rem'}">
+                <ng-template pTemplate="header">
+                    <tr>
+                        <th pSortableColumn="hcode" style="width:20%">Hcode <p-sortIcon field="code"></p-sortIcon></th>
+                        <th pSortableColumn="hname" style="width:20%">ชื่อสถานพยาบาล <p-sortIcon field="name"></p-sortIcon></th>
+                        <th pSortableColumn="type" style="width:20%">ประเภทที่ดิน <p-sortIcon field="category"></p-sortIcon></th>
+                        <th pSortableColumn="status" style="width:20%">สถานะ <p-sortIcon field="quantity"></p-sortIcon></th>
+                        <th pSortableColumn="problem" style="width:20%">ปัญหา/อุปสรรค <p-sortIcon field="price"></p-sortIcon></th>
+                        <th pSortableColumn="note" style="width:20%">ข้อเสนอ <p-sortIcon field="price"></p-sortIcon></th>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-product>
+                    <tr>
+                        <td>{{product.hcode}}</td>
+                        <td>{{product.hname}}</td>
+                        <td>{{product.type}}</td>
+                        <td>{{product.status}}</td>
+                        <td>{{product.problem}}</td>
+                        <td>{{product.note}}</td>
+                    </tr>
+                </ng-template>
+            </p-table>
+        </div>
+    </div>
+</div>

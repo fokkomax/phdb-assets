@@ -5,6 +5,8 @@ import { AppLayoutComponent } from "./layout/app.layout.component";
 import { MainComponent } from './main/main.component';
 import { LoginComponent } from './login/login.component';
 import { RoleGuard } from './guard/role.guard';
+import { OverallReportComponent } from './overall-report/overall-report.component';
+import { TransferFormComponent } from './transfer-form/transfer-form.component';
 
 
 const routes: Routes = [
@@ -13,6 +15,8 @@ const routes: Routes = [
     path: '', component: AppLayoutComponent,
     children: [
       { path: 'main', component: MainComponent, canActivate: [RoleGuard] },
+      { path: 'overall-report', component: OverallReportComponent, canActivate: [RoleGuard] },
+      { path: 'transfer-form', component: TransferFormComponent, canActivate: [RoleGuard] },
     ]
   },
   { path: 'login', component: LoginComponent }

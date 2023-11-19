@@ -1,1 +1,89 @@
-<p>main works!</p>
+<div class="grid">
+    <div class="col-12" @fadeAnimation2>
+        <div class="card">
+            <h5>
+                <p-badge value="รายงานแยกตามประเภท" size="large" severity="primary" styleClass="p-font">
+                </p-badge>
+            </h5>
+
+            <div class="card">
+                <p-table [value]="assets" dataKey="type" [tableStyle]="{ 'min-width': '60rem' }">
+                    <ng-template pTemplate="header">
+                        <tr>
+                            <th style="width: 5rem"></th>
+                            <th pSortableColumn="type">ประเภท <p-sortIcon field="type"></p-sortIcon></th>
+                            <th pSortableColumn="type_value">จำนวน <p-sortIcon field="type_value"></p-sortIcon></th>
+                        </tr>
+                    </ng-template>
+                    <ng-template pTemplate="body" let-asset let-expanded="expanded">
+                        <tr>
+                            <td>
+                                <button type="button" pButton pRipple [pRowToggler]="asset" class="p-button-text p-button-rounded p-button-plain" [icon]="expanded ? 'pi pi-chevron-down' : 'pi pi-chevron-right'"></button>
+                            </td>
+                            <td>{{ asset.type }}</td>
+                            <td>{{ asset.type_value }}</td>
+                        </tr>
+                    </ng-template>
+                    <ng-template pTemplate="rowexpansion" let-asset>
+                        <tr>
+                            <td colspan="7">
+                                <div class="p-3">
+                                    <p-table [value]="asset.zone" dataKey="zone_id">
+                                        <ng-template pTemplate="header">
+                                            <tr>
+                                                <th style="width: 5rem"></th>
+                                                <th pSortableColumn="zone_id">เขต <p-sortIcon field="zone_id"></p-sortIcon></th>
+                                                <th pSortableColumn="zone_value">จำนวน <p-sortIcon field="zone_value"></p-sortIcon></th>
+                                            </tr>
+                                        </ng-template>
+                                        <ng-template pTemplate="body" let-zone>
+                                            <tr>
+                                                <td>
+                                                    <button type="button" pButton pRipple [pRowToggler]="pv" class="p-button-text p-button-rounded p-button-plain" [icon]="expanded ? 'pi pi-chevron-down' : 'pi pi-chevron-right'"></button>
+                                                </td>
+                                                <td>{{ zone.zone_id }}</td>
+                                                <td>{{ zone.zone_value }}</td>
+                                            </tr>
+                                        </ng-template>
+                                        <ng-template pTemplate="emptymessage">
+                                            <tr>
+                                                <td colspan="6">There are no order for this product yet.</td>
+                                            </tr>
+                                        </ng-template>
+                                    </p-table>
+                                </div>
+                            </td>
+                        </tr>
+                    </ng-template>
+                    <!-- <ng-template pTemplate="rowexpansion" let-pv>
+                        <tr>
+                            <td colspan="7">
+                                <div class="p-3">
+                                    <p-table [value]="asset.zone.pv" dataKey="pv_name">
+                                        <ng-template pTemplate="header">
+                                            <tr>
+                                                <th pSortableColumn="pv_name">จังหวัด <p-sortIcon field="pv_name"></p-sortIcon></th>
+                                                <th pSortableColumn="pv_value">จำนวน <p-sortIcon field="pv_value"></p-sortIcon></th>
+                                            </tr>
+                                        </ng-template>
+                                        <ng-template pTemplate="body" let-pv>
+                                            <tr>
+                                                <td>{{ pv.pv_name }}</td>
+                                                <td>{{ pv.pv_value }}</td>
+                                            </tr>
+                                        </ng-template>
+                                        <ng-template pTemplate="emptymessage">
+                                            <tr>
+                                                <td colspan="6">There are no order for this product yet.</td>
+                                            </tr>
+                                        </ng-template>
+                                    </p-table>
+                                </div>
+                            </td>
+                        </tr>
+                    </ng-template> -->
+                </p-table>
+            </div>
+        </div>
+    </div>
+</div>

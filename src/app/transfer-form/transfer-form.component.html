@@ -1,0 +1,87 @@
+<div class="grid">
+    <div class="col-12" @fadeAnimation2>
+        <div class="card">
+            <h5>
+                <p-badge value="รายงานข้อมูลตามบัญชีแนบท้ายส่งมอบการถ่ายโอนฯ" size="large" severity="primary"
+                    styleClass="p-font">
+                </p-badge>
+            </h5>
+            <div class="card p-fluid">
+                <div class="field grid">
+                    <label htmlFor="name3" class="col-12 mb-2 md:col-2 md:mb-0">ชื่อสถานพยาบาล</label>
+                    <div class="col-12 md:col-10">
+                        <input pInputText id="name3" type="text" value="โรงพยาบาลส่งเสริมสุขภาพตำบล" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="card p-fluid">
+                <h5>ที่ดิน</h5>
+                <div class="field grid">
+                    <label htmlFor="name3" class="col-12 mb-2 md:col-2 md:mb-0">เลขที่</label>
+                    <div class="col-12 md:col-10">
+                        <input pInputText id="name3" type="text" value="กขค 1.254" />
+                    </div>
+                </div>
+                <div class="field grid">
+                    <label htmlFor="name3" class="col-12 mb-2 md:col-2 md:mb-0">จำนวน</label>
+                    <div class="col-12 md:col-10">
+                        <input pInputText id="name3" type="text" value="12 ไร่ 1 งาน 5 วา" />
+                    </div>
+                </div>
+                <div class="field grid">
+                    <label htmlFor="name3" class="col-12 mb-2 md:col-2 md:mb-0">หมายเหตุ</label>
+                    <div class="col-12 md:col-10">
+                        <input pInputText id="name3" type="text" value="-" />
+                    </div>
+                </div>
+                <div class="field grid">
+                    <label htmlFor="name3" class="col-12 mb-2 md:col-2 md:mb-0">ประเภทที่ดิน</label>
+                    <div class="col-12 md:col-10">
+                        <p-dropdown [options]="type" optionLabel="name" showClear="true"
+                            placeholder="เลือกประเภท"></p-dropdown>
+                    </div>
+                </div>
+                <div class="field grid">
+                    <label htmlFor="name3" class="col-12 mb-2 md:col-2 md:mb-0">สถานะปัจจุบัน</label>
+                    <div class="col-12 md:col-10">
+                        <p-dropdown [options]="status" optionLabel="name" showClear="true"
+                            placeholder="เลือกสถานะ"></p-dropdown>
+                    </div>
+                </div>
+                <div class="field grid">
+                    <label htmlFor="name3" class="col-12 mb-2 md:col-2 md:mb-0">ปัญหา</label>
+                    <div class="col-12 md:col-10">
+                        <input pInputText id="name3" type="text" value="-" />
+                    </div>
+                </div>
+                <div class="field grid">
+                    <label htmlFor="name3" class="col-12 mb-2 md:col-2 md:mb-0">แนวทาง</label>
+                    <div class="col-12 md:col-10">
+                        <input pInputText id="name3" type="text" value="-" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="card p-fluid">
+                <h5>สิ่งก่อสร้าง</h5>
+                <div class="field grid">
+                    <label htmlFor="name3" class="col-12 mb-2 md:col-2 md:mb-0">รายการ</label>
+                    <div class="col-12 md:col-10">
+                        <input pInputText id="name3" type="text" value="กขค 1.254" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="card p-fluid">
+                <h5>ครุภัณฑ์</h5>
+                <div class="field grid">
+                    <label htmlFor="name3" class="col-12 mb-2 md:col-2 md:mb-0">รายการ</label>
+                    <div class="col-12 md:col-10">
+                        <input pInputText id="name3" type="text" value="กขค 1.254" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

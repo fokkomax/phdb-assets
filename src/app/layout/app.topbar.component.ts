@@ -28,7 +28,6 @@ export class AppTopBarComponent {
     }
 
     async ngOnInit(): Promise<void> {
-        console.log(this.userDetail)
     }
 
     onLogout() {
